@@ -1,7 +1,6 @@
 import random
 from random import shuffle
 
-genes = "I use a genetic algorithm to solve an optimization problem"
 
 
 class Individual():
@@ -45,8 +44,8 @@ class Iteration():
             children = self.crossover(ind[i], ind[i + 1])
             for j in range(len(children)):
                 self.mutation(children[j], 0.1)
-                children[j].getFitness
-                ind.extend(children)
+                # children[j].getFitness
+            ind.extend(children)
         print(ind[0].getFitness())
 
 
@@ -69,6 +68,7 @@ class Iteration():
 
 
 if __name__ == "__main__":
+    genes = "I use a genetic algorithm to solve an optimization problem"
     number_individual = 500
     ind = [Individual(genes) for i in range(number_individual)]
 

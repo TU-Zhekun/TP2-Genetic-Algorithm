@@ -35,6 +35,13 @@ class Iteration():
             ind[i].getFitness()
         ind.sort(key=lambda data: data.fitness, reverse=True)
 
+        print(len(genes)/2)
+        print(int(len(genes)/2))
+        print(genes[0: 29])
+        print(genes[0: int(len(genes)/2)])
+
+
+
         # TODO: use selection_rate to select the first (selection_rate*len(ind)) of the population
         # print(ind[0])
         # print(ind[0].getFitness())
@@ -43,8 +50,11 @@ class Iteration():
         # print(ind[0].fitness)
 
     # TODO: crossover function
-    def crossover(self):
+    def crossover(self, parent1=Individual(), parent2=Individual()):
+        parent1.genes[0: len(genes)/2]
         pass
+
+
 
     # TODO: mutation function
     def mutation(self):
